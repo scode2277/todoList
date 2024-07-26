@@ -3,91 +3,188 @@
     color: gray;
     border: 1px solid gray;
 }
-body { 
-    background: rgb(0,0,0);
-    background: radial-gradient(circle, rgba(0,0,0,0.028124999999999956) 0%, rgba(253,187,45,1) 100%);
+
+body {
+    background-color: pink;
     font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 50px;
-  }
-  #todo-container {
-    background: rgb(41, 33, 33);
+}
+
+#todo-container {
+    background-color: #B4ADEA;
     width: 400px;
     margin: 0 auto;
-    border: 2px solid #0033ff;
     padding: 20px;
-    color: white;
+    color: #0A2342;
     border-radius: 15px;
-  }
-  #todo-container {
-    background: rgb(41, 33, 33);
-    width: 400px;
-    margin: 0 auto;
-    border: 2px solid #0033ff;
-    padding: 20px;
-    color: white;
-    border-radius: 15px;
-  }
-  #header {
+}
+
+#header {
     margin: 5px;
     font-size: 20px;
     text-align: center;
-  }
-  
-  h1 {
-    margin-bottom: 20px; 
-  }
-  
-  #input-box {
-    width: 200px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#input-box {
+    width: 70%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 5px;
     font-size: 20px;
-  }
-  
-  #input-button {
+    border-color: pink;
+}
+
+#input-button {
     font-size: 20px;
     cursor: pointer;
     transition: 0.4s;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #2e60ea;
-  }
-  
-  #input-button:hover {
-    background-color: #9eb7fd; 
-  }
-  ul {
+    background-color: #d1454c;
+}
+
+#input-button:hover {
+    background-color: #d1454cbd
+}
+
+ul {
     list-style: none;
     padding: 0;
     margin-top: 20px;
-    text-align:left;
-  
-  }
-  
-  li {
-  border: 1px solid white;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 10px;
-  margin-top: 10px;
-  }
-  
-  .edit-btn, .delete-btn {
+    text-align: left;
+
+}
+
+li {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.edit-btn {
     float: right;
-    color:crimson;
+    color: rgb(255, 102, 0);
     cursor: pointer;
     margin: 3px 5px;
     border: none;
     padding: 3px 5px;
     background: none;
-  } 
-  
-  .completed {
+}
+
+.delete-btn {
+    float: right;
+    color: crimson;
+    cursor: pointer;
+    margin: 3px 5px;
+    border: none;
+    padding: 3px 5px;
+    background: none;
+}
+
+.completed {
     text-decoration: line-through;
     color: gray;
     border: 1px solid gray;
-  }
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.1rem;
+    border: 0.25rem solid green;
+    border-radius: 0.5rem;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 1.1rem;
+    height: 1.1rem;
+    clip-path: polygon(10% 50%,
+            20% 40%,
+            40% 60%,
+            80% 10%,
+            90% 20%,
+            40% 80%,
+            10% 50%);
+    transform: scale(0);
+    background-color: green;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="checkbox"]:hover {
+    color: black;
+}
+
+.divCheckbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.labelCheckbox {
+    display: flex;
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+
+}
+
+.modal-footer .btn-custom-cancel {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.modal-footer .btn-custom-delete {
+    background-color: #e74c3c;
+    color: white;
+    border: 1px solid #c0392b;
+}
+
+.btn-custom-cancel {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-custom-cancel:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-custom-delete {
+    background-color: #e74c3c;
+    color: white;
+    border: 1px solid #c0392b;
+}
+
+.btn-custom-delete:hover {
+    background-color: #c0392b;
+}
+
+#error-div {
+    padding-top: 10px;
+}
+
+.spanTask {
+    margin-left: 5px;
+}

@@ -8,13 +8,12 @@
 </head>
 
 <body>
-    <!-- Modal HTML -->
+    <!-- Modal delete -->
     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete Task</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -37,12 +36,12 @@
 
         <div id="todo-form">
             <input type="text" class="input-item" name="input-box" id="input-box" placeholder="Add Task" />
-            <button id="input-button" onclick="addTask()">Add</button>
+            <button id="input-button">Add</button>
         </div>
         <div id="error-div"></div>
 
         <!-- task list -->
-        <h2>Task List</h2>
+        <h2 class="taskList">Task List</h2>
         <ul id="list-container"></ul>
         <hr />
         <!-- task list counter -->
